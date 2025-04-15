@@ -1,9 +1,5 @@
-FROM golang:1.23.6
+FROM scratch
 
-WORKDIR /app
+COPY app /app
 
-COPY . .
-
-RUN go build -o main
-
-CMD ["./main"]
+CMD ["/app"]
